@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<title>FTScratchBTSmart</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" />	
+	</head>
+	
+	<body>
+		
+		<h1><span style="color:#ed1c24;">FT</span><span style="color:#0071bc;">ScratchBTSmart</span></h1>
+		
+		<section>
+			<h1>About the product</h1>
+			<div class="content">
+				<img src="https://content.ugfischer.com/cbfiles/fischer/produktbilder/ft/540586_BT_SmartBeginner_Set_Fahrroboter.jpg" class="product"/>
+				<b>FTScratchBTSmart</b> enables use of the fischertechnik
+				<a href="https://www.fischertechnik.de/de-de/produkte/spielen/robotics/540586-robotics-bt-smart-beginner-set">ROBOTICS BT Smart </a>
+				on PCS or notebooks together with the easy-to-learn programming language
+				<a href="https://scratch.mit.edu/">Scratch</a>.
+				This allows little applications for the control of motors and lamps using switches,
+				light barriers and lots of other sensors to be created in a flash. The large number
+				of options offered by the programming language, Scratch, means that much larger programs can be created.
+				<br/><br/>
+
+				New Scratch upgrades, such as FTScratchBTSmart, use the developer version
+				<a href="http://scratchx.org/">ScratchX</a>.
+			</div>
+		</section>
+		
+		<section>
+		
+			<h1>HowTo</h1>
+			
+			<div class="content">
+				<h2>Windows</h2>
+				<ol>
+					<li>
+						Connect ROBOTICS BT Smart with the PC
+						<small>(USB/Bluetooth)</small>
+					</li>
+					<li>
+						Download the USB driver (
+						) and install it
+					</li>
+					<li>
+						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">Download</a>
+						and start FTScratchBTSmart <small>(requires a .NET Framework 4, generally available on Windows PCs)</small>
+					</li>
+					<li>
+						<a href="http://scratchx.org/?url=http://ftscratch.github.io/BTSmart/src/ext.js#scratch">Open</a>
+						ScratchX with upgrade
+						<small>(Firefox or Chrome)</small>
+					</li>
+					<li>Get started!</li>
+				</ol>
+			</div>
+						
+		</section>
+		
+		<section id="blockDescs">
+			<h1>Block description</h1>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="onOpenClose.png"/></div>
+				<div class="text">
+					This incident is activated as soon as a switch / reed contact / light barrier is pressed / closed on universal input I1-I8 (or released / opened).
+				</div>
+			</div>
+		
+			<div class="blockDesc">
+				<div class="image"><img src="onInput.png"/></div>
+				<div class="text">
+					This incident is activated as soon as the value of the colour sensor / ultrasound distance sensor / NTC resistance / photo resistance on universal input I1-I8 is higher / lower than an entered value or a value resulting in combination with blocks from the category "Operators".
+				</div>
+			</div>
+						
+			<div class="blockDesc">
+				<div class="image"><img src="getSensor.png"/></div>
+				<div class="text">
+					This block can be used to request the current value of the colour sensor / ultrasound distance sensor / NTC resistance / photo resistance on universal input I1-I8 and for calculations or conditions in combination with blocks from the categories "Control", "Operators" and "Incidents". The return value is a 16-Bit value. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doGetBattery.png"/></div>
+				<div class="text">
+					Get the current battery level in percent.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="isClosed.png"/></div>
+				<div class="text">
+					This block is used to request whether a switch / reed contact / light barrier on universal input I1-I8 is pressed / closed (or released / opened). It can be used for calculations or conditions in combination with blocks from the categories "Control", "Operators" and "Incidents". The return is a Boolean value. 
+				</div>
+			</div>
+						
+			<div class="blockDesc">
+				<div class="image"><img src="doSetLamp.png"/></div>
+				<div class="text">
+					Output O1 - O8 can be set, e.g. for a lamp, to a value of 0...8 using this block. Values lower than 0 or higher than 8 are cut off at 0 or 8. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doSetOutput.png"/></div>
+				<div class="text">
+					Output O1 - O8 can be set to a value of 0...8 using this block. Values lower than 0 or higher than 8 are cut off at 0 or 8. 
+				</div>
+			</div>
+						
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorSpeed.png"/></div>
+				<div class="text">
+					Output M1 - M4 can be set, e.g. for a motor, to a value of 0...8 using this block. Values lower than 0 or higher than 8 are cut off at 0 or 8. 
+				</div>
+			</div>
+		
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorSpeedDir.png"/></div>
+				<div class="text">
+					Output M1 - M4 can be set to forward (backward), e.g. for a motor, with a value of 0...8 using this block. Values lower than 0 or higher than 8 are cut off at 0 or 8.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorDir.png"/></div>
+				<div class="text">
+					Output M1 - M4 can be changed, e.g. for a motor, to forward (backward) using this block. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doStopMotor.png"/></div>
+				<div class="text">
+					A motor on output M1 - M4 can be stopped using this block.
+					The corresponding counter is unaffected.
+				</div>
+			</div>
+						
+			<div class="blockDesc">
+				<div class="image"><img src="doConfigureInput.png"/></div>
+				<div class="text">
+					Universal input I1 - I8 can be changed from digital to analog using this block. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="reset.png"/></div>
+				<div class="text">
+					This block resets the BTSmart.
+					All outputs and counters are set to 0.
+					Synchronisations are disabled.
+				</div>
+			</div>
+		
+		</section>
+		
+	</body>
+
+</html>

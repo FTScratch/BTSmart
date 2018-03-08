@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<title>FTScratchBTSmart</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" />	
+	</head>
+	
+	<body>
+		
+		<h1><span style="color:#ed1c24;">FT</span><span style="color:#0071bc;">ScratchBTSmart</span></h1>
+		
+		<section>
+			<h1>Über</h1>
+			<div class="content">
+				<img src="https://content.ugfischer.com/cbfiles/fischer/produktbilder/ft/540586_BT_SmartBeginner_Set_Fahrroboter.jpg" class="product"/>
+				<b>FTScratchBTSmart</b> ermöglicht auf PCs bzw. Notebooks die Verwendung des fischertechnik
+				<a href="https://www.fischertechnik.de/de-de/produkte/spielen/robotics/540586-robotics-bt-smart-beginner-set">ROBOTICS BT Smart </a>
+				zusammen mit der einfach zu erlernenden Programmiersprache
+				<a href="https://scratch.mit.edu/">Scratch</a>.
+				So können im Handumdrehen kleine Anwendungen zur Steuerung von Motoren
+				und Lampen mittels Tastern, Lichtschranken, und vielen weiteren Sensoren erstellt werden.
+				Durch die Vielzahl an Möglichkeiten, die die Programmiersprache Scratch bietet, können auch weitaus größere Programme erstellt werden.<br/><br/>
+
+				Neue Scratch-Erweiterungen, wie FTScratchBTSmart, verwenden hierzu die Entwicklerversion
+				<a href="http://scratchx.org/">ScratchX</a>.
+			</div>
+		</section>
+		
+		<section>
+		
+			<h1>HowTo</h1>
+			
+			<div class="content">
+				<h2>Windows</h2>
+				<ol>
+					<li>
+						ROBOTICS BT Smart mit dem PC verbinden
+						<small>(USB/Bluetooth)</small>
+					</li>
+					<li>
+						USB-Treiber herunterladen () und installieren
+					</li>
+					<li>
+						FTScratchBTSmart
+						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">herunterladen</a>
+						und starten. <small>(benötigt .NET Framework 4, i.d.R. auf Windows PCs vorhanden)</small>
+					</li>
+					<li>
+						ScratchX mit Erweiterung
+						<a href="http://scratchx.org/?url=http://ftscratch.github.io/BTSmart/src/ext.js#scratch">öffnen</a>
+						<small>(Firefox oder Chrome)</small>
+					</li>
+					<li>Loslegen!</li>
+				</ol>
+			</div>
+						
+		</section>
+		
+		<section id="blockDescs">
+			<h1>Blockbeschreibung</h1>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="onOpenClose.png"/></div>
+				<div class="text">
+					Dieses Ereignis löst aus, sobald ein Taster / Reed-Kontakt / Lichtschranke an Universaleingang I1-I8 gedrückt / geschlossen (oder losgelassen / geöffnet) wird.
+				</div>
+			</div>
+					
+			<div class="blockDesc">
+				<div class="image"><img src="onInput.png"/></div>
+				<div class="text">
+					Dieses Ereignis löst aus, sobald der Wert von Farbsensor / Ultraschall-Abstandssensor / NTC-Widerstand / Fotowiderstand an Universaleingang I1-I8 größer / kleiner als ein eingegebener Wert bzw. in Kombination mit Blöcken aus der Rubrik „Operatoren“ entstandener Wert wird.
+				</div>
+			</div>
+					
+			<div class="blockDesc">
+				<div class="image"><img src="getSensor.png"/></div>
+				<div class="text">
+					Über diesen Block kann der aktuelle Wert von Farbsensor / Ultraschall-Abstandssensor / NTC-Widerstand / Fotowiderstand an Universaleingang I1-I8 abgefragt und für Berechnungen oder Bedingungen in Kombination mit Blöcken aus den Rubriken "Steuerung", "Operatoren" und "Ereignisse" verwendet werden. Der Rückgabewert ist ein 16-Bit Wert.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doGetBattery.png"/></div>
+				<div class="text">
+					Dieser Block liefert den aktuellen Ladezustand der Batterie in Prozent.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="isClosed.png"/></div>
+				<div class="text">
+					Über diesen Block wird abgefragt, ob ein Taster / Reed-Kontakt / Lichtschranke an Universaleingang I1-I8 gedrückt / geschlossen (oder losgelassen / geöffnet) ist. Kann für Berechnungen oder Bedingungen in Kombination mit Blöcken aus den Rubriken "Steuerung", "Operatoren" und "Ereignisse" verwendet werden. Die Rückgabe ist ein Boole’scher Wert.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doSetLamp.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Ausgang O1 - O8 für z.B. eine Lampe auf einen Wert von 0...8 gesetzt werden. Werte kleiner 0 bzw. größer 8 werden auf 0 bzw. 8 abgeschnitten.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doSetOutput.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Ausgang O1 - O8 auf einen Wert von 0...8 gesetzt werden. Werte kleiner 0 bzw. größer 8 werden auf 0 bzw. 8 abgeschnitten.
+				</div>
+			</div>
+						
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorSpeed.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Ausgang M1 - M4 für z.B. einen Motor auf einen Wert von 0...8 gesetzt werden.
+					Werte kleiner 0 bzw. größer 8 werden auf 0 bzw. 8 abgeschnitten.
+				</div>
+			</div>
+		
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorSpeedDir.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Ausgang M1 - M4 für z.B. einen Motor auf vorwärts (rückwärts) gesetzt werden mit einem Wert von 0...8.
+					Werte kleiner 0 bzw. größer 8 werden auf 0 bzw. 8 abgeschnitten.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doSetMotorDir.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Ausgang M1 - M4 für z.B. einen Motor auf vorwärts (rückwärts) abgeändert werden. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doStopMotor.png"/></div>
+				<div class="text">
+					Über diesen Block kann ein Motor an Ausgang M1 - M4 gestoppt werden. 
+					Der zugehörige Zähler wird nicht verändert.
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="doConfigureInput.png"/></div>
+				<div class="text">
+					Über diesen Block kann der Universaleingang I1 - I8 von digital nach analog umgeschaltet werden. 
+				</div>
+			</div>
+			
+			<div class="blockDesc">
+				<div class="image"><img src="reset.png"/></div>
+				<div class="text">
+					Dieser Block setzt den BTSmart zurück.
+					Alle Ausgänge und Zähler werden auf 0 gesetzt.
+					Synchronisierungen zwischen Motoren werden aufgehoben. 
+				</div>
+			</div>
+		
+		</section>
+		
+	</body>
+
+</html>
