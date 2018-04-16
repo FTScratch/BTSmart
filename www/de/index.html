@@ -34,19 +34,62 @@
 			
 			<div class="content">
 				<h2>Windows</h2>
+				<ul>
+					<li><b>USB</b></li>
+						<ol>
+							<li>ROBOTICS BT Smart mit dem PC verbinden</li>
+							<li>USB-Treiber herunterladen () und installieren</li>
+						</ol>
+					<li><b>BlueGiga Dongle</b></li>
+						<ol>
+							<li>BlueGiga Dongle mit dem PC via USB verbinden</li>
+						</ol>
+					<li><b>Bluetooth LE</b></li>
+						<ol>
+							<li>folgt in Kürze</li>
+						</ol>
+				</ul>
 				<ol>
-					<li>
-						ROBOTICS BT Smart mit dem PC verbinden
-						<small>(USB/Bluetooth)</small>
-					</li>
-					<li>
-						USB-Treiber herunterladen () und installieren
-					</li>
 					<li>
 						FTScratchBTSmart
 						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">herunterladen</a>
 						und starten. <small>(benötigt .NET Framework 4, i.d.R. auf Windows PCs vorhanden)</small>
 					</li>
+					<li>
+						ScratchX mit Erweiterung
+						<a href="http://scratchx.org/?url=http://ftscratch.github.io/BTSmart/src/ext.js#scratch">öffnen</a>
+						<small>(Firefox oder Chrome)</small>
+					</li>
+					<li>Loslegen!</li>
+				</ol>
+				<h2>Linux</h2>
+				<ul>
+					<li><b>USB</b></li>
+						<ol>
+							<li>
+<pre>su
+modprobe ftdi_sio
+echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
+							</li>
+							<li>
+								ROBOTICS BT Smart mit dem PC via USB verbinden
+							</li>
+						</ol>
+					</li>
+					<li><b>BlueGiga Dongle</b></li>
+						<ol>
+							<li>
+								BlueGiga Dongle mit dem PC via USB verbinden
+							</li>
+						</ol>
+				</ul>
+				<ol>
+					<li>
+						FTScratchBTSmart
+						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">herunterladen</a>
+						und starten. <small>(benötigt mono)</small>
+					</li>
+					<pre>mono FTScratchBTSmart.exe</pre>
 					<li>
 						ScratchX mit Erweiterung
 						<a href="http://scratchx.org/?url=http://ftscratch.github.io/BTSmart/src/ext.js#scratch">öffnen</a>

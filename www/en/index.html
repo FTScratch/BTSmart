@@ -35,15 +35,22 @@
 			
 			<div class="content">
 				<h2>Windows</h2>
+				<ul>
+					<li><b>USB</b></li>
+						<ol>
+							<li>Connect ROBOTICS BT Smart with the PC</li>
+							<li>Download the USB driver () and install it</li>
+						</ol>
+					<li><b>BlueGiga Dongle</b></li>
+						<ol>
+							<li>Connect the BlueGiga Dongle with the PC</li>
+						</ol>
+					<li><b>Bluetooth LE</b></li>
+						<ol>
+							<li>coming soon</li>
+						</ol>
+				</ul>
 				<ol>
-					<li>
-						Connect ROBOTICS BT Smart with the PC
-						<small>(USB/Bluetooth)</small>
-					</li>
-					<li>
-						Download the USB driver (
-						) and install it
-					</li>
 					<li>
 						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">Download</a>
 						and start FTScratchBTSmart <small>(requires a .NET Framework 4, generally available on Windows PCs)</small>
@@ -55,6 +62,39 @@
 					</li>
 					<li>Get started!</li>
 				</ol>
+				
+				<h2>Linux</h2>
+				<ul>
+					<li><b>USB</b></li>
+						<ol>
+							<li>
+<pre>su
+modprobe ftdi_sio
+echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
+							</li>
+							<li>Connect ROBOTICS BT Smart with the PC</li>
+						</ol>
+					</li>
+					<li><b>BlueGiga Dongle</b></li>
+						<ol>
+							<li>Connect the BlueGiga Dongle with the PC</li>
+						</ol>
+				</ul>
+				<ol>
+					<li>
+						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">Download</a>
+						and start FTScratchBTSmart <small>(requires mono)</small>
+					</li>
+					<pre>mono FTScratchBTSmart.exe</pre>
+					<li>
+						<a href="http://scratchx.org/?url=http://ftscratch.github.io/BTSmart/src/ext.js#scratch">Open</a>
+						ScratchX with upgrade
+						<small>(Firefox or Chrome)</small>
+					</li>
+					<li>Get started!</li>
+				</ol>
+				
+				
 			</div>
 						
 		</section>
