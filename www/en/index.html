@@ -68,7 +68,7 @@
 					<li><b>USB</b></li>
 						<ol>
 							<li>
-<pre>su
+<pre>su [or: sudo -s]
 modprobe ftdi_sio
 echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
 							</li>
@@ -77,7 +77,11 @@ echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
 					</li>
 					<li><b>BlueGiga Dongle</b></li>
 						<ol>
-							<li>Connect the BlueGiga Dongle with the PC</li>
+							<li>
+								Connect the BlueGiga Dongle with the PC<br/>
+								Allow access to non-root users:
+								<pre>sudo chmod a+rw /dev/ttyACM0</pre>
+							</li>
 						</ol>
 				</ul>
 				<ol>
