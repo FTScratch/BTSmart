@@ -36,19 +36,28 @@
 			<div class="content">
 				<h2>Windows</h2>
 				<ul>
-					<li><b>USB</b></li>
+					<li><b>USB</b>
 						<ol>
 							<li>Connect ROBOTICS BT Smart with the PC</li>
 							<li>Download the USB driver () and install it</li>
 						</ol>
-					<li><b>BlueGiga Dongle</b></li>
+					</li>
+					<br/>
+						
+					<li><b>bluegiga BLED 112-V1 (Bluetooth-serial-converter)</b>
 						<ol>
-							<li>Connect the BlueGiga Dongle with the PC</li>
+							<li>Connect the Dongle with the PC</li>
 						</ol>
-					<li><b>Bluetooth LE</b></li>
+					</li>
+					<br/>
+						
+					<li><b>Bluetooth LE</b>
 						<ol>
 							<li>coming soon</li>
 						</ol>
+					</li>
+					<br/>
+						
 				</ul>
 				<ol>
 					<li>
@@ -65,7 +74,7 @@
 				
 				<h2>Linux</h2>
 				<ul>
-					<li><b>USB</b></li>
+					<li><b>USB</b>
 						<ol>
 							<li>
 <pre>su [or: sudo -s]
@@ -75,14 +84,19 @@ echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
 							<li>Connect ROBOTICS BT Smart with the PC</li>
 						</ol>
 					</li>
-					<li><b>BlueGiga Dongle</b></li>
+					<br/>
+					
+					<li><b>bluegiga BLED 112-V1 (Bluetooth-serial-converter)</b>
 						<ol>
 							<li>
-								Connect the BlueGiga Dongle with the PC<br/>
+								Connect the Dongle with the PC<br/>
 								Allow access to non-root users:
 								<pre>sudo chmod a+rw /dev/ttyACM0</pre>
 							</li>
 						</ol>
+					</li>
+					<br/>
+					
 				</ul>
 				<ol>
 					<li>
