@@ -78,8 +78,8 @@
 	
 	// received state
 	ext.input = {
-		curValues:	{},
-		oldValues:	{},
+		curValues:	{ inputs: [0,0,0,0,0] },
+		oldValues:	{ inputs: [0,0,0,0,0] },
 	}
 	
 	// convert Output name to array index: '04' -> 3
@@ -185,8 +185,21 @@
 		
 			
 	/** input values have changed */
-	ext.onNewInputs = function() {
-		;
+	ext.onNewInputs = function(data) {
+		
+		ext.input.oldValues = ext.input.curValues;
+		ext.input.curValues = data;
+		
+		/*
+		for (var i = 0; i < 5; ++i) {
+			if (data.inputs[i] != ext.input.curValues.inputs[i]) {
+				ext.input.oldValues.inputs[i] = ext.input.curValues.inputs[i];
+				ext.input.curValues.inputs[i] = data.inputs[i];
+				//console.log("changed " + i + " to " + data.inputs[i]);
+			}
+		}
+		*/
+		
 	};
 	
 	/** ping/pong between scratch and app */

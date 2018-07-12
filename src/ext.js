@@ -165,9 +165,9 @@ function ScratchConnection(url, ext) {
 		var data = (messageData) ? (JSON.parse(messageData)) : null;
 				
 		if (messageType === "SENS") {
-			ext.input.oldValues = ext.input.curValues;
-			ext.input.curValues = data;
-			ext.onNewInputs();
+			//ext.input.oldValues = ext.input.curValues;
+			//ext.input.curValues = data;
+			ext.onNewInputs(data);
 		} else if (messageType == "PONG") {
 			ext.onPong();
 			var dev = data[0];
@@ -367,8 +367,8 @@ var IO = {
 	
 	// received state
 	ext.input = {
-		curValues:	{},
-		oldValues:	{},
+		curValues:	{ inputs: [0,0,0,0,0] },
+		oldValues:	{ inputs: [0,0,0,0,0] },
 	}
 	
 	// convert Output name to array index: '04' -> 3
@@ -474,8 +474,21 @@ var IO = {
 		
 			
 	/** input values have changed */
-	ext.onNewInputs = function() {
-		;
+	ext.onNewInputs = function(data) {
+		
+		ext.input.oldValues = ext.input.curValues;
+		ext.input.curValues = data;
+		
+		/*
+		for (var i = 0; i < 5; ++i) {
+			if (data.inputs[i] != ext.input.curValues.inputs[i]) {
+				ext.input.oldValues.inputs[i] = ext.input.curValues.inputs[i];
+				ext.input.curValues.inputs[i] = data.inputs[i];
+				//console.log("changed " + i + " to " + data.inputs[i]);
+			}
+		}
+		*/
+		
 	};
 	
 	/** ping/pong between scratch and app */

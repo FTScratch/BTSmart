@@ -48,9 +48,9 @@ function ScratchConnection(url, ext) {
 		var data = (messageData) ? (JSON.parse(messageData)) : null;
 				
 		if (messageType === "SENS") {
-			ext.input.oldValues = ext.input.curValues;
-			ext.input.curValues = data;
-			ext.onNewInputs();
+			//ext.input.oldValues = ext.input.curValues;
+			//ext.input.curValues = data;
+			ext.onNewInputs(data);
 		} else if (messageType == "PONG") {
 			ext.onPong();
 			var dev = data[0];
