@@ -81,7 +81,11 @@ modprobe ftdi_sio
 echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
 							</li>
 							<li>
-								ROBOTICS BT Smart mit dem PC via USB verbinden
+								ROBOTICS BT Smart mit dem PC via USB verbinden<br/>
+								Je nach Linux Version muss Zugriff für nicht-root-User erlaubt werden:
+								<pre>sudo chmod a+rw /dev/ttyUSB0</pre>
+								oder
+								<pre>sudo chmod a+rw /dev/ttyACM0</pre>
 							</li>
 						</ol>
 					</li>
@@ -103,7 +107,7 @@ echo "221d 0005" > /sys/bus/usb-serial/drivers/ftdi_sio/new_id</pre>
 					<li>
 						FTScratchBTSmart
 						<a href="http://ftscratch.github.io/BTSmart/bin/FTScratchBTSmart.exe">herunterladen</a>
-						und starten. <small>(benötigt mono)</small>
+						und starten. <small>(benötigt mono und evtl. libgdiplus)</small>
 					</li>
 					<pre>mono FTScratchBTSmart.exe</pre>
 					<li>
